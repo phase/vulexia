@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vulexia</title>
+    <style>
+      body {
+        background-color: thistle;
+      }
+
+      .noun {color: lightcoral;}
+      .verb {color: lightgreen;}
+      .adjective {color: lightskyblue;}
+      .adverb {color: violet;}
+      .conjunction {color: orange;}
+      .preposition {color: pink;}
+      .interjection {color: white;}
+      .article {color: white;}
+      .pronoun {color: yellow;}
+
+      .content {
+        width: 80vw;
+        height: 80vh;
+        margin: auto;
+      }
+
+      #input {
+        width: 50%;
+        height: 30%;
+      }
+
+      #output {
+        width: 50%;
+        min-height: 30%;
+        background-color: #333;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        line-height: 1.6;
+        padding: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+    <script src="./bootstrap.js"></script>
+
+    <div class="content">
+      <p>coloring text based on part of speech</p>
+      <textarea id="input">
+        In the recent years, homotopy type theory has become the subject of much study.
+        Homotopy type theory studies the correspondence between the (propositional) equality in
+        Martin-Lof’s type theory and the concept of homotopy from topology. The correspondence
+        roughly means that inhabitants of a type can be seenas points of a space and that a
+        propositional equality x = y can be seen as a path from x to y. At the time of writing,
+        virtually all material on the subject is of a rather mathematical nature and focuses on
+        its use in formalising mathematics. This thesis aims to provide an introduction to
+        homotopy type theory geared toward programmers familiar with dependently typed
+        programming, but unfamiliar with topology. We will present applications of homotopy
+        type theory to programming, such as quotient types and dealing with views on abstract
+        types. Furthermore, we will discuss the use of h-propositions to identify parts of a
+        program that are not needed at runtime, compare it to existing methods present in Coq
+        and Agda and discuss whether this can be used to optimise programs. Such an approach
+        works in plain Martin-Lof’s type theory. In homotopy type theory however, it does not
+        work in general, but we can identify cases in which it still works.</textarea>
+      <br><!--whydoineed2?--><br>
+      <button id="submit">Submit</button>
+      <br><br>
+      <div id="output"></div>
+    </div>
+  </body>
+</html>
